@@ -1,0 +1,143 @@
+body {
+    padding: 3rem 0;
+    background: #29293A;
+    font: 100% 'Roboto Slab', serif;
+    line-height: 1.5;
+    color: #aeb1be;
+}
+
+table {
+    width: 96%;
+    max-width: 85rem;
+    margin: 0 auto;
+    border: 0.125rem solid rgb(143, 104, 32);
+    box-shadow: 0 0 0.5rem 0.25rem #1d1d23;
+}
+
+table caption {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.44rem;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(243, 235, 220);
+}
+
+table caption span {
+    display: block;
+    font-size: 2.986rem;
+    line-height: 3rem;
+    text-shadow: 0 0 0.45rem rgb(243, 180, 63);
+}
+
+tr { 
+    line-height: 1.5rem; 
+    height: 3rem;
+}
+
+tr:nth-of-type(even) { background: #1d1d23; }
+
+th,
+td {
+    padding: 0 0.5rem;
+}
+
+th { 
+    position: relative;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+th,
+th:after {
+    background: #05050e;
+}
+
+th:after {
+    content: attr(data-th-abbr);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0.5rem;
+    width: calc(100% - 1rem);
+    line-height: 3rem;
+}
+
+@media only screen and (max-width:65.625rem) {
+    th:after {
+        display: block;
+    }
+}
+
+@media only screen and (max-width:50.938rem) {
+    th,
+    td {
+        display: block;
+    }
+
+    table { 
+        width: 100%;
+        border: 0;
+        box-shadow: none;
+    }
+
+    thead tr { 
+        position: absolute;
+        border: 0;
+        clip: rect(0,0,0,0);
+        height: 0px;
+        overflow: hidden;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    tr:nth-of-type(even) { background: 0; }
+    tr:nth-of-type(odd) { background: #1d1d23; }
+
+    td { 
+        display: flex;
+        padding: 0.7188rem 3%; 
+        border-bottom: 1px solid rgb(143, 104, 32);
+    }
+
+    td:before {
+        content: attr(data-th)": ";
+        font-weight: 700;
+        display: inline-block;
+        width: 25vw;
+        min-width: 8.75rem;
+        color: rgb(243, 235, 220);
+    }
+}
+
+@media only screen and (max-width:37.5rem) {
+    table caption {
+        font-size: 1.2rem;
+    }
+    
+    table caption span {
+        font-size: 2.074rem;
+    }
+}
+
+/* dosis-regular - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+            url('../fonts/dosis/dosis-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('../fonts/dosis/dosis-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-slab-regular - latin */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
+         url('../fonts/roboto/roboto-slab-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/roboto/roboto-slab-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
